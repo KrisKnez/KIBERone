@@ -1,9 +1,23 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Header from "../components/organisms/Header";
+
+import Hero from "../components/sections/Hero";
+import Stats from "../components/sections/Stats";
+import Cards from "../components/sections/Cards";
+import Sponsors from "../components/sections/Sponsors";
+import Location from "../components/sections/Location";
 
 export default function Home() {
   return (
-    <div><h1 className="text-3xl">Boilerplate</h1></div>
-  )
+    <>
+      {/* Header + Hero = 100vh */}
+      <div className="flex flex-col min-h-screen space-y-12">
+        <Header />
+        <Hero className="grow my-0"/>
+      </div>
+      <Stats />
+      <Cards />
+      <Sponsors />
+      <Location />
+    </>
+  );
 }
