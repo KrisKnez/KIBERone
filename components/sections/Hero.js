@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import Image from "next/image";
 
-import Section from "/components/templates/section";
+import Section from "/components/templates/Section";
 import Button from "/components/atoms/Button";
 import Accordion from "/components/organisms/Accordion";
 

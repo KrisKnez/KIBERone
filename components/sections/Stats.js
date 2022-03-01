@@ -1,6 +1,6 @@
 import React from "react";
 
-import Section from "/components/templates/section";
+import Section from "/components/templates/Section";
 
 const StatItem = (props) => {
   return (
