@@ -2,9 +2,9 @@ import React from "react";
 
 import Image from "next/image";
 
-import Button from "../atoms/Button";
+import Button from "/components/atoms/Button";
 
-import Logo from "../../assets/Logo.png";
+import Logo from "/assets/Logo.png";
 
 const Header = () => {
   return (

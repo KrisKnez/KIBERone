@@ -3,11 +3,11 @@ import classNames from "classnames";
 
 import Image from "next/image";
 
-import RobloxLogo from "../../assets/sponsors/Roblox-Logo.png";
-import SamsungLogo from "../../assets/sponsors/Logo-Samsung.png";
-import CroAILogo from "../../assets/sponsors/CroAI_color_smaller.png";
-import MinecraftLogo from "../../assets/sponsors/Minecraft-Logo_moved.png";
-import MicrosoftLogo from "../../assets/sponsors/Microsoft-Logo.png";
+import RobloxLogo from "/assets/sponsors/Roblox-Logo.png";
+import SamsungLogo from "/assets/sponsors/Logo-Samsung.png";
+import CroAILogo from "/assets/sponsors/CroAI_color_smaller.png";
+import MinecraftLogo from "/assets/sponsors/Minecraft-Logo_moved.png";
+import MicrosoftLogo from "/assets/sponsors/Microsoft-Logo.png";
 
 const Sponsor = (props) => {
   return (

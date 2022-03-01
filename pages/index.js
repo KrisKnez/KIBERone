@@ -1,10 +1,10 @@
-import Header from "../components/organisms/Header";
+import Header from "/components/organisms/Header";
 
-import Hero from "../components/sections/Hero";
-import Stats from "../components/sections/Stats";
-import Cards from "../components/sections/Cards";
-import Sponsors from "../components/sections/Sponsors";
-import Location from "../components/sections/Location";
+import Hero from "/components/sections/Hero";
+import Stats from "/components/sections/Stats";
+import Cards from "/components/sections/Cards";
+import Sponsors from "/components/sections/Sponsors";
+import Location from "/components/sections/Location";
 
 export default function Home() {
   return (

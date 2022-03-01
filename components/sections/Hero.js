@@ -3,12 +3,12 @@ import classNames from "classnames";
 
 import Image from "next/image";
 
-import Section from "../templates/section";
-import Button from "../atoms/Button";
-import Accordion from "../organisms/Accordion";
+import Section from "/components/templates/section";
+import Button from "/components/atoms/Button";
+import Accordion from "/components/organisms/Accordion";
 
-import Kid from "../../assets/kid.jpg";
-import Kids from "../../assets/kids_faded2.png";
+import Kid from "/assets/kid.jpg";
+import Kids from "/assets/kids_faded2.png";
 
 const Hero = ({ className }) => {
   return (
