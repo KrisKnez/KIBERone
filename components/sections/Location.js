@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Loader } from "@googlemaps/js-api-loader";
-
 const Location = () => {
   // let mapsRef = React.useRef();
 
