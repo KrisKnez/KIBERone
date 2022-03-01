@@ -7,7 +7,9 @@ const Card = (props) => {
     <div className="bg-gradient-to-br from-slate-700 to-slate-800 text-white rounded-3xl flex flex-col justify-between space-y-4 p-8 basis-full">
       {props.number && <span className="text-gray-300">#{props.number}</span>}
       {props.title && <h3 className="text-3xl font-semibold">{props.title}</h3>}
-      {props.cta && <span className="font-bold">{props.cta}</span>}
+      <a href="#contact">
+        {props.cta && <span className="font-bold">{props.cta}</span>}
+      </a>
     </div>
   );
 };

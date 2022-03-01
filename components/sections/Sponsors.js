@@ -62,7 +62,7 @@ const sponsors = [
 const Sponsors = () => {
   return (
     <section className="bg-black py-8">
-      <div className="container mx-auto max-w-screen-lg flex flex-wrap justify-center px-4">
+      <div className="container mx-auto max-w-screen-xl flex flex-wrap justify-center px-4">
         {sponsors.map((sponsor, i) => (
           <Sponsor
             key={i}

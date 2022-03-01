@@ -12,7 +12,12 @@ import Kids from "/assets/kids_faded2.png";
 
 const Hero = ({ className }) => {
   return (
-    <Section className={classNames("relative h-full", className)}>
+    <Section
+      className={classNames(
+        "relative h-full flex flex-col justify-center lg:justify-start",
+        className
+      )}
+    >
       {/* Background image */}
       <div className="absolute w-full h-full inset-0 -z-[1] flex justify-end">
         <div className="relative w-1/2 h-full hidden lg:block">
@@ -57,7 +62,12 @@ const Hero = ({ className }) => {
           </div>
           <div className="flex flex-col">
             {/* <Button>Edukacijski program i cijene</Button> */}
-            <button className="rounded-xl p-4 font-bold text-xl text-white bg-gradient-to-br from-cyan-400 to-blue-500">Edukacijski program i cijene</button>
+            <a href="#contact">
+            <button
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+               Edukacijski program i cijene
+              </button>
+            </a>
             <div className="prose">
               <ul className="list-disc">
                 <li>Više od 50 modula u ponudi</li>

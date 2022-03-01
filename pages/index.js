@@ -5,6 +5,8 @@ import Stats from "/components/sections/Stats";
 import Cards from "/components/sections/Cards";
 import Sponsors from "/components/sections/Sponsors";
 import Location from "/components/sections/Location";
+import Contact from "components/sections/Contact";
+import Footer from "components/sections/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Cards />
       <Sponsors />
       <Location />
+      <Contact/>
+      <Footer/>
     </>
   );
 }
