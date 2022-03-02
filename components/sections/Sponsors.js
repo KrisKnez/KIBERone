@@ -12,11 +12,11 @@ import MicrosoftLogo from "/assets/sponsors/Microsoft-Logo.png";
 const Sponsor = (props) => {
   return (
     <div
-      className={classNames("basis-1/2 sm:basis-1/3 md:basis-1/5 px-4", {
+      className={classNames("w-1/2 sm:w-1/3 md:w-1/5 px-4", {
         "brightness-0 invert": props.effect,
       })}
     >
-      <div className="relative aspect-w-16 aspet-h-9 w-full">
+      <div className="relative aspect-w-2 aspect-h-1">
         <Image
           layout="fill"
           objectFit="contain"
