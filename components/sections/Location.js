@@ -1,6 +1,6 @@
 import React from "react";
 
-import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
+// import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 
 const Location = () => {
   const mapContainer = React.useRef(null);
@@ -35,16 +35,16 @@ const Location = () => {
   //     });
   // }, []);
 
-  React.useLayoutEffect(() => {
-    mapboxgl.accessToken =
-      "pk.eyJ1IjoiYWRvbmxpYyIsImEiOiJjbDBhMnh0ankwajE1M2NueTZjbG90bjR3In0.Wle-7mMK7Cv1dHT_B_0BaA";
-    const map = new mapboxgl.Map({
-      container: mapContainer.current, // container ID
-      style: "mapbox://styles/mapbox/streets-v11", // style URL
-      center: [-74.5, 40], // starting position [lng, lat]
-      zoom: 9, // starting zoom
-    });
-  }, []);
+  // React.useLayoutEffect(() => {
+  //   mapboxgl.accessToken =
+  //     "pk.eyJ1IjoiYWRvbmxpYyIsImEiOiJjbDBhMnh0ankwajE1M2NueTZjbG90bjR3In0.Wle-7mMK7Cv1dHT_B_0BaA";
+  //   const map = new mapboxgl.Map({
+  //     container: mapContainer.current, // container ID
+  //     style: "mapbox://styles/mapbox/streets-v11", // style URL
+  //     center: [-74.5, 40], // starting position [lng, lat]
+  //     zoom: 9, // starting zoom
+  //   });
+  // }, []);
 
   return (
     <section className="bg-black text-white overflow-auto py-10">
