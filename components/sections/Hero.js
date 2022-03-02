@@ -28,12 +28,13 @@ const Hero = ({ className }) => {
           />
         </div>
       </div>
-      <div className="flex items-stretch relative">
+      <div className="flex items-stretch relative text-center lg:text-left">
         <div className="w-full lg:w-2/5 space-y-6">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold break-word">
             {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
             {/* Gubljenje vremena na gadgetima pretvaramo u korisno znanje! */}
-            IT škola <i className="font-bold text-cyan-500">programiranja</i>
+            IT škola <br />
+            <i className="font-bold text-cyan-500">programiranja</i>
             <br />
             za djecu
           </h1>

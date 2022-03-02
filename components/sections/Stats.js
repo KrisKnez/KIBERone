@@ -28,7 +28,7 @@ const Stats = (props) => {
       <StatItem data="25" title="Zemalja" />
       <StatItem data="250" title="Gradova" />
       <StatItem pretext="Više od" data="30.000" title="Učenika" />
-      <StatItem data="10.000 KN" title="Prosječna plaća programera" />
+      <StatItem pretext="Kuna" data="10.000" title="Prosječna plaća programera" />
       <StatItem data="80%" title="Prakse" />
     </Section>
   );
