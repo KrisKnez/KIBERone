@@ -12,10 +12,12 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "animated-number-react": "^0.1.2",
     "classnames": "^2.3.1",
+    "mapbox-gl": "^2.7.0",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",

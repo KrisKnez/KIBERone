@@ -33,14 +33,14 @@ const Hero = ({ className }) => {
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold break-word">
             {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
             {/* Gubljenje vremena na gadgetima pretvaramo u korisno znanje! */}
-            IT škola <i className="font-bold text-sky-600">programiranja</i>
+            IT škola <i className="font-bold text-cyan-500">programiranja</i>
             <br />
             za djecu
           </h1>
           <h2 className="text-3xl font-semibold">
             {/* Umjesto igrica, TikTok-a i YouTube-a, korisno znanje! */}
-            <span className="text-sky-600">Korisno znanje</span> umjesto:
-            igrica, TikTok-a i YouTube-a!
+            <span className="text-cyan-500 underline">Korisno znanje</span>{" "}
+            umjesto: igrica, TikTok-a i YouTube-a!
           </h2>
           <div className="divide-y">
             <Accordion title="Individualan pristup">
@@ -60,7 +60,7 @@ const Hero = ({ className }) => {
           </div>
           <div className="flex flex-col">
             <a href="#contact">
-              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <button className="text-white bg-gradient-to-r from-indigo-700 to-purple-500 focus:ring-4 focus:ring-blue-300 font-normal rounded text-base px-9 py-3 text-center">
                 Edukacijski program i cijene
               </button>
             </a>

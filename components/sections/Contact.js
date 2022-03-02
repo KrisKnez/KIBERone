@@ -16,8 +16,8 @@ const Contact = () => {
       <div className="basis-1/2 px-8 py-12">
         {/* Contact Form */}
         <div className="relative">
-          <div className="bg-red-400 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6 scale-x-105"></div>
-          <div className="bg-sky-500 shadow-lg w-full h-full rounded-3xl absolute transform -rotate-6 scale-x-105"></div>
+          <div className="bg-cyan-500 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6 scale-x-105"></div>
+          <div className="bg-black shadow-lg w-full h-full rounded-3xl absolute transform -rotate-6 scale-x-105"></div>
           <form className="relative bg-white shadow-lg w-full h-full rounded-3xl p-8 space-y-3">
             <label
               htmlFor="tel"
