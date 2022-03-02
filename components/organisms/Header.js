@@ -1,6 +1,5 @@
 import React from "react";
 import classNames from "classnames";
-import Link from "next/link";
 
 import Image from "next/image";
 
@@ -15,10 +14,12 @@ const Header = () => {
   return (
     <header className="py-4">
       <div className="container mx-auto max-w-screen-xl flex flex-wrap justify-between items-center space-y-8 md:space-x-5 px-4">
-        <div className="relative w-48 md:w-48 aspect-[16/10]">
-          <a href="#">
-            <Image src={Logo} layout="fill" alt="Logo" />
-          </a>
+        <div className="w-48">
+          <div className="aspect-w-16 aspect-h-10">
+            <a href="#">
+              <Image src={Logo} layout="fill" alt="Logo" />
+            </a>
+          </div>
         </div>
         <div className="hidden md:flex flex-col items-center w-1/2 md:w-auto">
           <span>Obuhvatna edukacija</span>
@@ -52,10 +53,12 @@ const Header = () => {
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="relative w-48 md:w-48 aspect-[16/10]">
-          <a href="#" onClick={() => setSidebarOpen(false)}>
-            <Image src={Logo} layout="fill" alt="Logo" />
-          </a>
+        <div className="relative w-48 md:w-48">
+          <div className="aspect-w-16 aspect-h-10">
+            <a href="#" onClick={() => setSidebarOpen(false)}>
+              <Image src={Logo} layout="fill" alt="Logo" />
+            </a>
+          </div>
         </div>
         <div className="p-4 pt-8 flex flex-col items-stretch space-y-4">
           <a href="#partners" onClick={() => setSidebarOpen(false)}>
