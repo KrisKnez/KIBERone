@@ -8,7 +8,7 @@ const Accordion = (props) => {
   let toggle = () => setExtended(!extended);
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col text-left">
       <div
         className="flex w-full cursor-pointer select-none space-x-4"
         onClick={toggle}
@@ -16,7 +16,7 @@ const Accordion = (props) => {
         <div className="flex items-center justify-center py-2 text-4xl">
           <BiCheck />
         </div>
-        <div className="grow flex items-center text-xl font-semibold">
+        <div className="grow flex items-center text-xl font-semibold py-2">
           {props.title}
         </div>
         <div className="flex items-center justify-center py-2 text-3xl">
@@ -25,7 +25,7 @@ const Accordion = (props) => {
       </div>
       <div
         className={classNames(
-          "transition-all overflow-hidden ease-in-out",
+          "transition-all overflow-hidden ease-in-out text-left",
           extended ? "opacity-100 h-full" : "opacity-0 h-0"
         )}
       >
