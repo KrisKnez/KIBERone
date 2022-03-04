@@ -51,13 +51,17 @@ const Location = () => {
       <div className="container mx-auto max-w-screen-xl text-center space-y-5 px-4">
         <h2 className="text-5xl font-bold">Lokacije u Zagrebu</h2>
         <h3 className="text-xl">Kontakt: +385 95 394 33 44</h3>
-        <div ref={mapContainer} id="map" className="bg-white overflow-hidden rounded-3xl h-96">
-          {/* <iframe
+        <div
+          ref={mapContainer}
+          id="map"
+          className="bg-white overflow-hidden rounded-3xl h-96"
+        >
+          <iframe
             className="w-full h-full"
             loading="lazy"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDY3JL8yrlEz-qoV1gkhpy7AVUdi5MoBak
     &q=KIBERone+Zagreb&zoom=15&language=hr"
-          ></iframe> */}
+          ></iframe>
         </div>
       </div>
     </section>
