@@ -1,0 +1,73 @@
+.nav-header-controls {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  margin-left: auto;
+  min-width: 40px;
+  height: 40px
+}
+
+.nav-header-controls li {
+  margin-left: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 40px
+}
+
+.nav-header-controls li:first-child {
+  margin-left: 0
+}
+
+.nav-header-controls--burger {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center
+}
+
+.nav-header-controls--burger i {
+    display: block;
+    padding: 3px 0;
+    transition: transform .4s ease .4s,opacity .4s ease .4s;
+    will-change: transform
+}
+
+.nav-header-controls--burger i:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: currentColor;
+    transition: transform .3s ease 0s;
+    will-change: transform
+}
+
+.nav-header-controls--burger.active i {
+    transition: transform .3s ease 0s,opacity .3s ease 0s
+}
+
+.nav-header-controls--burger.active i:before {
+    transition: transform .45s ease .35s
+}
+
+.nav-header-controls--burger.active i:first-child {
+    transform: translateY(8px)
+}
+
+.nav-header-controls--burger.active i:first-child:before {
+    transform: rotate(-135deg)
+}
+
+.nav-header-controls--burger.active i:nth-child(2) {
+    opacity: 0
+}
+
+.nav-header-controls--burger.active i:nth-child(3) {
+    transform: translateY(-8px)
+}
+
+.nav-header-controls--burger.active i:nth-child(3):before {
+    transform: rotate(-225deg)
+}

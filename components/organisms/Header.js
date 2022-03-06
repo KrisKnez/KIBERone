@@ -7,6 +7,8 @@ import Logo from "/assets/Logo.png";
 
 import { VscMenu } from "react-icons/vsc";
 
+import MenuControlButton from "components/atoms/MenuControlButton";
+
 const Header = () => {
   let [sidebarOpen, setSidebarOpen] = React.useState(false);
   let openSidebar = () => {
@@ -64,7 +66,8 @@ const Header = () => {
           className="md:hidden w-12 h-12 flex items-center justify-center text-5xl"
           onClick={toggleSidebar}
         >
-          <VscMenu />
+          {/* <VscMenu /> */}
+          <MenuControlButton active={sidebarOpen} />
         </button>
       </div>
       {/* Mobile sidebar */}
