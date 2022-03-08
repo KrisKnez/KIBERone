@@ -1,16 +1,15 @@
 import React from "react";
 
+// import { polyfill } from "smoothscroll-polyfill";
+import 'smoothscroll-anchor-polyfill'
+
 import "/styles/globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-import smoothscroll from "smoothscroll-polyfill";
-// import React from "react";
-
 function MyApp({ Component, pageProps }) {
-  React.useEffect(() => {
-    // kick off the polyfill!
-    smoothscroll.polyfill();
-  }, []);
+  // React.useEffect(() => {
+  //   polyfill();
+  // }, []);
 
   return <Component {...pageProps} />;
 }
