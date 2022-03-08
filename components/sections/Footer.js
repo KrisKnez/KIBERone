@@ -12,12 +12,12 @@ const Footer = () => {
       <div className="container mx-auto max-w-screen-xl px-4 py-8 flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-16">
         <div className="basis-2/5 flex flex-col space-y-2 text-center">
           <span>
-            © 2016-2021 KIBERone | Najbolja obrazovna ustanova za dogitalni
-            odgoj djece od 6. do 15. godine u 2018. g. na teritoriju Europske
-            Unije.
+            © 2016-2021 KIBERone | 2018. godina- proglašena najboljom obrazovnom
+            ustanovom za digitalni odgoj djece od 6 do 15 godina, na teritoriju
+            Europske Unije.
           </span>
           <span>
-            Kroz natječaj UN i UNESCO dobili smo prvo mjesto u kategoriji
+            Nagrađeni od strane UN-a i UNESC-a prvim mjestom u kategoriji
             najbolji međunarodni projekt edukacije za djecu u području digitalne
             tehnologije.
           </span>

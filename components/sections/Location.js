@@ -49,8 +49,8 @@ const Location = () => {
   return (
     <section className="bg-black text-white overflow-auto py-10">
       <div className="container mx-auto max-w-screen-xl text-center space-y-5 px-4">
-        <h2 className="text-5xl font-bold">Lokacije u Zagrebu</h2>
-        <h3 className="text-xl">Kontakt: +385 95 394 33 44</h3>
+        <h2 className="text-4xl font-bold">Lokacija u Zagrebu</h2>
+        <h3 className="text-lg">Kontakt: <a href="tel:385953943344">+385 95 394 33 44</a></h3>
         <div
           ref={mapContainer}
           id="map"

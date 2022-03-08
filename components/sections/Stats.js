@@ -9,7 +9,7 @@ const StatItem = (props) => {
         <div className="text-center">
           <span>&#8203;{props.pretext}</span>
           {props.data && (
-            <h3 className="text-5xl font-semibold¸m-0">{props.data}</h3>
+            <h3 className="text-4xl lg:text-5xl font-semibold¸m-0">{props.data}</h3>
           )}
           <span>&#8203;{props.posttext}</span>
         </div>
@@ -25,10 +25,10 @@ const StatItem = (props) => {
 const Stats = (props) => {
   return (
     <Section className="flex flex-wrap justify-center">
-      <StatItem data="25" title="Zemalja" />
+      <StatItem data="25" title="Država" />
       <StatItem data="250" title="Gradova" />
-      <StatItem pretext="Više od" data="30.000" title="Učenika" />
-      <StatItem pretext="Kuna" data="10.000" title="Prosječna plaća programera" />
+      <StatItem data="30.000+" title="Učenika" />
+      <StatItem data="10.000" title="Prosječna plaća programera" />
       <StatItem data="80%" title="Prakse" />
     </Section>
   );
