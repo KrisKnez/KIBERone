@@ -47,6 +47,7 @@ const Contact = () => {
       alert("Vaše pitanje je primljeno!");
     } catch (e) {
       console.error(e);
+      alert("Provjerite unesene podatke")
     }
   };
 
