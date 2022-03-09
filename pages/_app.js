@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
       {/* <!-- Facebook Pixel Code --> */}
 
-      <Script id="facebook-pixel">
+      <Script id="facebook-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -42,7 +42,6 @@ function MyApp({ Component, pageProps }) {
           fbq('track', 'PageView');
         `}
       </Script>
-
       {/* <!-- End Facebook Pixel Code --> */}
       <Component {...pageProps} />
     </>
