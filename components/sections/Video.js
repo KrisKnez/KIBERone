@@ -19,7 +19,7 @@ const Video = () => {
               size: 1080,
             },
           ],
-          poster: "/path/to/poster.jpg",
+          // poster: "/path/to/poster.jpg",
         }}
         options={
           {

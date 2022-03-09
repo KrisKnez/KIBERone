@@ -1,6 +1,8 @@
 import React from "react";
 
 import Script from "next/script";
+import { DefaultSeo } from "next-seo";
+import SEO from "../seo.config";
 
 // import "smoothscroll-anchor-polyfill";
 
@@ -43,6 +45,7 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       {/* <!-- End Facebook Pixel Code --> */}
+      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
     </>
   );

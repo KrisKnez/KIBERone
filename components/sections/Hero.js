@@ -36,14 +36,16 @@ const Hero = ({ className }) => {
           <div className="relative border lg:border-0 p-8 lg:p-0 rounded-3xl overflow-hidden lg:overflow-visible flex">
             {/* Background image */}
             <div className="absolute h-full w-full inset-0 lg:hidden">
-              <Image
-                priority
-                layout="fill"
-                src={KidsSquare}
-                alt="Kid"
-                objectFit="scale-down"
-                objectPosition="right"
-              />
+              <div className="relative h-full w-full inset-0">
+                <Image
+                  priority
+                  layout="fill"
+                  src={KidsSquare}
+                  alt="Kid"
+                  objectFit="scale-down"
+                  objectPosition="right"
+                />
+              </div>
             </div>
             <h1 className="relative text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-semibold break-word text-left">
               {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
