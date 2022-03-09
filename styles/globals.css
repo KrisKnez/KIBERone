@@ -16,4 +16,8 @@
   .button-outlined:hover > * {
     @apply bg-opacity-0;
   }
+
+  .input {
+    @apply px-4 py-2 rounded-md border border-gray-300 focus:border-gray-400 focus:outline-none transition duration-300;
+  }
 }

@@ -30,14 +30,14 @@ const Contact = () => {
           <div className="bg-cyan-500 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6 scale-x-105"></div>
           <div className="bg-black shadow-lg w-full h-full rounded-3xl absolute transform -rotate-6 scale-x-105"></div>
           <form
-            className="relative bg-white shadow-lg w-full h-full rounded-3xl p-8 space-y-3 flex flex-wrap"
+            className="relative bg-white shadow-lg w-full h-full rounded-3xl p-8 space-y-4 flex flex-wrap"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="flex w-full space-x-5">
+            <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap w-full space-y-5 md:space-y-0 md:space-x-5">
               {/* Ime */}
               <label
                 htmlFor="tel"
-                className="flex flex-col text-gray-700 select-none font-medium w-1/2 space-y-1"
+                className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
                 <span>
                   Ime:<span className="text-red-500">*</span>
@@ -47,14 +47,14 @@ const Contact = () => {
                   type="text"
                   {...register("firstName", { required: true })}
                   placeholder="Vaše ime"
-                  className="px-4 py-2 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                  className="input"
                 />
               </label>
 
               {/* Prezime */}
               <label
                 htmlFor="tel"
-                className="flex flex-col text-gray-700 select-none font-medium w-1/2 space-y-1"
+                className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
                 <span>
                   Prezime:<span className="text-red-500">*</span>
@@ -65,7 +65,7 @@ const Contact = () => {
                   type="text"
                   {...register("lastName", { required: true })}
                   placeholder="Vaše prezime"
-                  className="px-4 py-2 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                  className="input"
                 />
               </label>
             </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                 type="tel"
                 {...register("phone", { required: true })}
                 placeholder="Vaš broj telefona / mobitela"
-                className="px-4 py-2 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                className="input"
               />
             </label>
 
@@ -99,7 +99,7 @@ const Contact = () => {
                 id="msg"
                 {...register("question", { required: true })}
                 placeholder="Vaše pitanje"
-                className="px-4 py-2 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                className="input"
               />
             </label>
             <div className="w-full">

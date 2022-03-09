@@ -18,9 +18,9 @@ const Hero = ({ className }) => {
         className
       )}
     >
-      {/* Background image */}
+      {/* Backgrou  nd image */}
       <div className="absolute w-full h-full inset-0 flex justify-end items-start">
-        <div className="relative w-1/2 aspect-[71/91] hidden lg:block">
+        <div className="relative w-3/5 md:w-1/2 aspect-[71/91]  lg:block">
           <Image
             priority
             layout="fill"
@@ -30,8 +30,8 @@ const Hero = ({ className }) => {
           />
         </div>
       </div>
-      <div className="flex items-stretch relative text-center lg:text-left">
-        <div className="w-full lg:w-2/5 space-y-6">
+      <div className="flex items-stretch relative text-center md:text-left">
+        <div className="w-full md:w-2/5 space-y-10">
           <div className="relative">
             <div className="absolute inset-0 w-full h-full flex justify-end">
               <div className="relative aspect-w-7 aspect-h-9 h-full">
@@ -44,7 +44,7 @@ const Hero = ({ className }) => {
                 />
               </div>
             </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold break-word text-left">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-semibold break-word text-left">
               {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
               {/* Gubljenje vremena na gadgetima pretvaramo u korisno znanje! */}
               IT škola <br />
