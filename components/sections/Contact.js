@@ -1,15 +1,54 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
+import axios from "axios";
+
 import Section from "components/templates/Section";
+
+const PORTAL_ID = "25648050";
+const FORM_GUID = "2554a5eb-2dde-4ae0-8f4a-482e15c3aa7a";
+const ENDPOINT = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) =>
-    window
-      .open(`https://wa.me/385953943344?text=${data.question}`, "_blank")
-      .focus();
+  const onSubmit = async (data) => {
+    try {
+      let response = await axios.post(ENDPOINT, {
+        fields: [
+          {
+            objectTypeId: "0-1",
+            name: "firstname",
+            value: data.firstname,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "lastname",
+            value: data.lastname,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "phone",
+            value: data.phone,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "email",
+            value: data.email,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "message",
+            value: data.message,
+          },
+        ],
+      });
+
+      console.log(response);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   return (
     <Section
@@ -36,16 +75,16 @@ const Contact = () => {
             <div className="flex flex-col md:flex-row flex-wrap md:flex-nowrap w-full space-y-5 md:space-y-0 md:space-x-5">
               {/* Ime */}
               <label
-                htmlFor="tel"
+                htmlFor="firstname"
                 className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
                 <span>
                   Ime:<span className="text-red-500">*</span>
                 </span>
                 <input
-                  id="tel"
+                  id="firstname"
                   type="text"
-                  {...register("firstName", { required: true })}
+                  {...register("firstname", { required: true })}
                   placeholder="Vaše ime"
                   className="input"
                 />
@@ -53,7 +92,7 @@ const Contact = () => {
 
               {/* Prezime */}
               <label
-                htmlFor="tel"
+                htmlFor="lastname"
                 className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
                 <span>
@@ -61,9 +100,9 @@ const Contact = () => {
                 </span>
 
                 <input
-                  id="tel"
+                  id="lastname"
                   type="text"
-                  {...register("lastName", { required: true })}
+                  {...register("lastname", { required: true })}
                   placeholder="Vaše prezime"
                   className="input"
                 />
@@ -87,17 +126,34 @@ const Contact = () => {
               />
             </label>
 
+            {/* Email adresa */}
+            <label
+              htmlFor="email"
+              className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
+            >
+              <span>
+                Email:<span className="text-red-500">*</span>
+              </span>
+              <input
+                id="email"
+                type="email"
+                {...register("email", { required: true })}
+                placeholder="Vaš email"
+                className="input"
+              />
+            </label>
+
             {/* Message */}
             <label
-              htmlFor="msg"
+              htmlFor="message"
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
               <span>
                 Pitanje:<span className="text-red-500">*</span>
               </span>
               <textarea
-                id="msg"
-                {...register("question", { required: true })}
+                id="message"
+                {...register("message", { required: true })}
                 placeholder="Vaše pitanje"
                 className="input"
               />
