@@ -44,7 +44,7 @@ const Contact = () => {
         ],
       });
 
-      console.log(response);
+      alert("Vaše pitanje je primljeno!");
     } catch (e) {
       console.error(e);
     }
