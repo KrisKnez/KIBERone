@@ -16,7 +16,7 @@ const StatItem = (props) => {
         <div className="w-full px-4">
           <div className="w-full border-y border-slate-900" />
         </div>
-        {props.title && <h4>{props.title}</h4>}
+        {props.title && <h4 className="h-16">{props.title}</h4>}
       </div>
     </div>
   );
