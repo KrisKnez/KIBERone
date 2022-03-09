@@ -7,6 +7,7 @@ import Sponsors from "/components/sections/Sponsors";
 import Location from "/components/sections/Location";
 import Contact from "components/sections/Contact";
 import Footer from "components/sections/Footer";
+import Video from "components/sections/Video";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Sponsors />
       <Location />
       <Contact/>
+      <Video/>
       <Footer/>
     </>
   );

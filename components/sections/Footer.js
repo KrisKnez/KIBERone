@@ -8,7 +8,7 @@ import Wsis from "/assets/awards/Wsis.png";
 
 const Footer = () => {
   return (
-    <section className="bg-black mt-16 overflow-auto text-white">
+    <section className="bg-black overflow-auto text-white">
       <div className="container mx-auto max-w-screen-xl px-4 py-8 flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-16">
         <div className="basis-2/5 flex flex-col space-y-2 text-center">
           <span>
