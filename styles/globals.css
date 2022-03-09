@@ -4,7 +4,7 @@
 
 @layer components {
   .button {
-    @apply text-white bg-gradient-to-r from-indigo-700 to-purple-500 hover:from-indigo-600 hover:to-purple-400 focus:ring-4 focus:ring-blue-300 font-normal rounded text-base px-9 py-3 text-center transition-all ease-in duration-75;
+    @apply text-white bg-gradient-to-r from-indigo-700 to-purple-500 hover:opacity-80 focus:ring-4 focus:ring-blue-300 font-normal rounded text-base px-9 py-3 text-center transition-all ease-in duration-100;
   }
 
   .button-outlined {
