@@ -9,6 +9,7 @@ import Accordion from "/components/organisms/Accordion";
 import { BiPlus } from "react-icons/bi";
 
 import Kids from "/assets/kids_faded2_cut.png";
+import KidsSquare from "/assets/kids_square.png";
 
 const Hero = ({ className }) => {
   return (
@@ -18,9 +19,9 @@ const Hero = ({ className }) => {
         className
       )}
     >
-      {/* Backgrou  nd image */}
+      {/* Background image */}
       <div className="absolute w-full h-full inset-0 flex justify-end items-start">
-        <div className="relative w-3/5 md:w-1/2 aspect-[71/91]  lg:block">
+        <div className="relative w-3/5 md:w-1/2 aspect-[71/91]  hidden lg:block">
           <Image
             priority
             layout="fill"
@@ -30,21 +31,21 @@ const Hero = ({ className }) => {
           />
         </div>
       </div>
-      <div className="flex items-stretch relative text-center md:text-left">
-        <div className="w-full md:w-2/5 space-y-10">
-          <div className="relative">
-            <div className="absolute inset-0 w-full h-full flex justify-end">
-              <div className="relative aspect-w-7 aspect-h-9 h-full">
-                <Image
-                  priority
-                  layout="fill"
-                  src={Kids}
-                  alt="Kid"
-                  objectFit="scale-down"
-                />
-              </div>
+      <div className="flex items-stretch relative text-center lg:text-left">
+        <div className="w-full lg:w-2/5 space-y-10">
+          <div className="relative border lg:border-0 p-8 lg:p-0 rounded-3xl overflow-hidden lg:overflow-visible flex">
+            {/* Background image */}
+            <div className="absolute h-full w-full inset-0 lg:hidden">
+              <Image
+                priority
+                layout="fill"
+                src={KidsSquare}
+                alt="Kid"
+                objectFit="scale-down"
+                objectPosition="right"
+              />
             </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-semibold break-word text-left">
+            <h1 className="relative text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-semibold break-word text-left">
               {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
               {/* Gubljenje vremena na gadgetima pretvaramo u korisno znanje! */}
               IT škola <br />
@@ -75,11 +76,9 @@ const Hero = ({ className }) => {
               logičko razmišljanje, brzinu donošenja odluka.
             </Accordion>
           </div>
-          <div className="flex flex-col sm:flex-row items-center space-x-2">
-            <a href="#contact">
-              <button className="button">
-                Edukacijski program i cijene
-              </button>
+          <div className="flex flex-col sm:flex-row items-center sm:space-x-2 space-y-4 sm:space-y-0">
+            <a href="#contact" className="w-full sm:w-auto">
+              <button className="button">Edukacijski program i cijene</button>
             </a>
             <div className="flex flex-col text text-left">
               <div className="flex">
