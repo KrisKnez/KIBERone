@@ -79,8 +79,8 @@ const Contact = () => {
                 htmlFor="firstname"
                 className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
-                <span>
-                  Ime:<span className="text-red-500">*</span>
+                <span className="space-x-1">
+                  <span>Ime:</span><span className="text-red-500">*</span>
                 </span>
                 <input
                   id="firstname"
@@ -96,8 +96,8 @@ const Contact = () => {
                 htmlFor="lastname"
                 className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
-                <span>
-                  Prezime:<span className="text-red-500">*</span>
+                <span className="space-x-1">
+                  <span>Prezime:</span><span className="text-red-500">*</span>
                 </span>
 
                 <input
@@ -115,8 +115,8 @@ const Contact = () => {
               htmlFor="tel"
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
-              <span>
-                Broj telefona:<span className="text-red-500">*</span>
+              <span className="space-x-1">
+                <span>Broj telefona:</span><span className="text-red-500">*</span>
               </span>
               <input
                 id="tel"
@@ -132,8 +132,8 @@ const Contact = () => {
               htmlFor="email"
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
-              <span>
-                Email:<span className="text-red-500">*</span>
+              <span className="space-x-1">
+                <span>Email:</span><span className="text-red-500">*</span>
               </span>
               <input
                 id="email"
@@ -149,8 +149,8 @@ const Contact = () => {
               htmlFor="message"
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
-              <span>
-                Pitanje:<span className="text-red-500">*</span>
+              <span className="space-x-1">
+                <span>Pitanje:</span><span className="text-red-500">*</span>
               </span>
               <textarea
                 id="message"
