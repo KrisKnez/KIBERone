@@ -58,6 +58,7 @@ const Header = () => {
         <button
           className="md:hidden w-12 h-12 flex items-center justify-center text-5xl"
           onClick={toggleSidebar}
+          aria-label="Sidebar Toggle"
         >
           {/* <VscMenu /> */}
           <MenuControlButton active={sidebarOpen} />

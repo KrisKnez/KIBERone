@@ -9,7 +9,7 @@ const StatItem = (props) => {
         <div className="text-center">
           <span>&#8203;{props.pretext}</span>
           {props.data && (
-            <h3 className="text-4xl lg:text-5xl font-semibold¸m-0">{props.data}</h3>
+            <h2 className="text-4xl lg:text-5xl font-semibold¸m-0">{props.data}</h2>
           )}
           <span>&#8203;{props.posttext}</span>
         </div>
