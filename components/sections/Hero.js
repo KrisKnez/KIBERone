@@ -66,8 +66,8 @@ const Hero = ({ className }) => {
             <Accordion title="Individualan pristup">
               Nastava se vrši u malim grupama do 10 učenika.
             </Accordion>
-            <Accordion title="Jednom tjedno-vikendom">
-              Nastava se vrši jednom tjedno-vikendom (ujutro, poslijepodne,
+            <Accordion title="Jednom tjedno - vikendom">
+              Nastava se vrši jednom tjedno - vikendom (ujutro, poslijepodne,
               navečer).
             </Accordion>
             <Accordion title="Besplatna ogledna radionica">
@@ -82,7 +82,7 @@ const Hero = ({ className }) => {
             <a href="#contact" className="w-full sm:w-auto">
               <button className="button">Edukacijski program i cijene</button>
             </a>
-            <div className="flex flex-col text text-left">
+            <div className="flex flex-col text text-left text-sm">
               <div className="flex">
                 <div className="p-1">
                   <BiPlus />
