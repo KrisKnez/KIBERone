@@ -59,6 +59,7 @@ const Location = () => {
           <iframe
             className="w-full h-full"
             loading="lazy"
+            title="Google Maps"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDY3JL8yrlEz-qoV1gkhpy7AVUdi5MoBak
     &q=KIBERone+Zagreb&zoom=15&language=hr"
           ></iframe>

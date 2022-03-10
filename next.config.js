@@ -19,6 +19,10 @@ const nextConfig = {
     });
     return config;
   },
+  i18n: {
+    locales: ["hr"],
+    defaultLocale: "hr",
+  },
 };
 
 module.exports = nextConfig;

@@ -12,7 +12,7 @@ const Card = (props) => {
       <div className="relative transition-all text-white  flex flex-col justify-between space-y-4 p-8">
         {props.number && <span className="text-gray-300">#{props.number}</span>}
         {props.title && (
-          <h3 className="text-3xl font-semibold">{props.title}</h3>
+          <h2 className="text-3xl font-semibold">{props.title}</h2>
         )}
         {props.cta && <span className="font-bold">{props.cta}</span>}
       </div>
