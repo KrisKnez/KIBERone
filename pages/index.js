@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <>
       {/* Header + Hero = 100vh */}
-      <div className="flex flex-col min-h-screen space-y-12">
+      <div className="flex flex-col min-h-screen space-y-2 md:space-y-6 lg:space-y-14">
         <Header />
-        <Hero className="grow my-0"/>
+        <Hero className="my-0"/>
       </div>
       <Stats />
       <Cards />
