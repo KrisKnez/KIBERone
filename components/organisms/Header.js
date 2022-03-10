@@ -26,7 +26,7 @@ const Header = () => {
     <header className="py-2 md:py-4">
       <div className="container mx-auto max-w-screen-xl flex justify-between items-center md:space-x-4 lg:space-x-24 px-4">
         {/* Logo */}
-        <div className="w-20 md:w-48">
+        <div className="w-16 md:w-48">
           <div className="aspect-w-16 aspect-h-10">
             <a href="#">
               <Image src={Logo} layout="fill" alt="Logo" />
@@ -96,10 +96,9 @@ const Header = () => {
         <div>
           <div className="flex flex-col items-center space-y-5">
             <span>
-              Obuhvatna edukacija digitalnim tehnologijama za djecu od 6 do 14
+              Edukacija digitalnim tehnologijama za djecu od 6 do 14
             </span>
             <div className="flex flex-col w-full">
-              <span>Nazovite nas na</span>
               <a href="tel:385953943344" className="font-bold">
                 +385 95 394 33 44
               </a>
