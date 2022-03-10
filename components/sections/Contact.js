@@ -160,7 +160,7 @@ const Contact = () => {
               />
             </label>
             <div className="w-full">
-              <button type="submit" className="button">
+              <button type="submit" className="button w-full md:w-auto">
                 Dogovori poziv
               </button>
             </div>
