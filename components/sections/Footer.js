@@ -23,8 +23,8 @@ const Footer = () => {
           </span>
         </div>
         <div className="basis-3/5 flex flex-wrap justify-center">
-          <div className="w-full sm:w-1/2 lg:w-1/3 bg-black p-4 flex justify-center items-center">
-            <div className="relative aspect-w-16 aspect-h-9 w-full">
+          <div className="w-full sm:w-1/2 lg:w-1/3 bg-black p-8 md:p-4 flex justify-center items-center">
+            <div className="relative aspect-w-3 md:aspect-w-16 aspect-h-1 md:aspect-h-9 w-full">
               <Image
                 layout="fill"
                 src={Histes}
@@ -33,8 +33,8 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/3 bg-black p-4 flex justify-center items-center">
-            <div className="relative aspect-w-16 aspect-h-9 w-full">
+          <div className="w-full sm:w-1/2 lg:w-1/3 bg-black p-8 md:p-4 flex justify-center items-center">
+            <div className="relative aspect-w-3 md:aspect-w-16 aspect-h-1 md:aspect-h-9 w-full">
               <Image
                 layout="fill"
                 src={Roblox}
@@ -43,8 +43,8 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/3 bg-black p-4 flex justify-center items-center">
-            <div className="relative aspect-w-16 aspect-h-9 w-full">
+          <div className="w-full sm:w-1/2 lg:w-1/3 bg-black p-8 md:p-4 flex justify-center items-center">
+            <div className="relative aspect-w-3 md:aspect-w-16 aspect-h-1 md:aspect-h-9 w-full">
               <Image layout="fill" src={Wsis} alt="Wsis" objectFit="contain" />
             </div>
           </div>
