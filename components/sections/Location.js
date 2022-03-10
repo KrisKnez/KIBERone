@@ -57,7 +57,7 @@ const Location = () => {
           className="bg-white overflow-hidden rounded-3xl h-96"
         >
           <iframe
-            className="w-full h-full"
+            className="w-full h-full overflow-hidden rounded-3xl"
             loading="lazy"
             title="Google Maps"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDY3JL8yrlEz-qoV1gkhpy7AVUdi5MoBak
