@@ -8,7 +8,8 @@ const Accordion = (props) => {
   let toggle = () => setExtended(!extended);
 
   return (
-    <div className="w-full flex flex-col text-left">
+    <div className="w-full flex flex-col text-left transition-all">
+      {/* Header */}
       <div
         className="flex w-full cursor-pointer select-none space-x-4"
         onClick={toggle}
@@ -24,19 +25,25 @@ const Accordion = (props) => {
             <div className="absolute">
               <BiMinus />
             </div>
-            <div className={classNames("absolute transition-transform ease-in", extended ? "scale-y-0" : " scale-y-100")}>
+            <div
+              className={classNames(
+                "absolute transition-transform ease-in",
+                extended ? "scale-y-0" : " scale-y-100"
+              )}
+            >
               <BiPlus />
             </div>
           </div>
         </div>
       </div>
+      {/* Content */}
       <div
         className={classNames(
-          "transition-all overflow-hidden ease-in-out text-left",
-          extended ? "opacity-100 h-full" : "opacity-0 h-0"
+          "overflow-hidden transition-all ease-in-out duration-500",
+          extended ? "max-h-64" : "max-h-0"
         )}
       >
-        <div className="py-2">
+        <div className={classNames("py-2 transition-all ease-in-out delay-200", extended ? "opacity-100" : "opacity-0")}>
           {React.Children.map(props.children, (child) => child)}
         </div>
       </div>
