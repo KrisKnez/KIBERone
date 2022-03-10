@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.k1-cyber.hr/
+
+# Sitemaps
+Sitemap: https://www.k1-cyber.hr/sitemap.xml
