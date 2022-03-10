@@ -88,7 +88,7 @@ const Hero = ({ className }) => {
                   <BiPlus />
                 </div>
                 <div>
-                  <span className="font-bold text-amber-600">
+                  <span className="font-bold text-amber-700">
                     Više od 50 modula
                   </span>{" "}
                   u ponudi
@@ -100,7 +100,7 @@ const Hero = ({ className }) => {
                 </div>
                 <div>
                   Svaki modul završava{" "}
-                  <span className="font-bold text-amber-600">
+                  <span className="font-bold text-amber-700">
                     vlastitim IT projektom
                   </span>
                 </div>
