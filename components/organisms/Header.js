@@ -94,10 +94,8 @@ const Header = () => {
           </a>
         </div>
         <div>
-          <div className="flex flex-col items-center space-y-5">
-            <span>
-              Edukacija digitalnim tehnologijama za djecu od 6 do 14
-            </span>
+          <div className="flex flex-col items-start space-y-5">
+            <span>Digitalno obrazovanje za djecu od 6 do 15 godina</span>
             <div className="flex flex-col w-full">
               <a href="tel:385953943344" className="font-bold">
                 +385 95 394 33 44
