@@ -16,7 +16,7 @@ const Sponsor = (props) => {
         "brightness-0 invert": props.effect,
       })}
     >
-      <div className="relative aspect-w-2 aspect-h-1">
+      <div className="relative aspect-w-1 lg:aspect-w-2 aspect-h-1">
         <Image
           layout="fill"
           objectFit="contain"
