@@ -10,7 +10,7 @@ const FORM_GUID = "2554a5eb-2dde-4ae0-8f4a-482e15c3aa7a";
 const ENDPOINT = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data) => {
     try {
@@ -44,7 +44,8 @@ const Contact = () => {
         ],
       });
 
-      alert("Vaše pitanje je primljeno!");
+      alert("Hvala, poruka je zaprimljena. Javit cemo vam se sto prije");
+      reset();
     } catch (e) {
       console.error(e);
       alert("Provjerite unesene podatke")
