@@ -1,4 +1,6 @@
 import React from "react";
+import CookieConsent from "react-cookie-consent";
+
 
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
@@ -47,6 +49,7 @@ function MyApp({ Component, pageProps }) {
       {/* <!-- End Facebook Pixel Code --> */}
       <DefaultSeo {...SEO} />
       <Component {...pageProps} />
+      <CookieConsent buttonText="Prihvaćam">Ova stranica koristi kolačiće kako bi poboljšala Vaše korisničko iskustvo i funkcionalnost stranice.</CookieConsent>
     </>
   );
 }
