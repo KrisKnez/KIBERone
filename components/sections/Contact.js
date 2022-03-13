@@ -5,8 +5,8 @@ import axios from "axios";
 
 import Section from "components/templates/Section";
 
-const PORTAL_ID = "25648050";
-const FORM_GUID = "2554a5eb-2dde-4ae0-8f4a-482e15c3aa7a";
+const PORTAL_ID = "25657475";
+const FORM_GUID = "b14de669-5dfe-4ec3-b9be-3cc962fcfcdf";
 const ENDPOINT = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
 
 const Contact = () => {
