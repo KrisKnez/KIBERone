@@ -51,8 +51,8 @@ const Hero = ({ className }) => {
               {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
               {/* Gubljenje vremena na gadgetima pretvaramo u korisno znanje! */}
               IT škola <br />
-              <i className="font-bold text-cyan-500">programiranja</i>
-              <br />
+              <i className="font-bold text-cyan-500 hidden sm:block">programiranja</i>
+              <br className="hidden sm:none" />
               za djecu
             </h1>
           </div>
