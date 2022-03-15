@@ -50,10 +50,21 @@ const Hero = ({ className }) => {
             <h1 className="relative text-4xl sm:text-6xl md:text-7xl lg:text-7xl font-semibold break-word text-left">
               {/* Dijete stalno bulji u ekrane? Dovedite ga u KIBERONE! */}
               {/* Gubljenje vremena na gadgetima pretvaramo u korisno znanje! */}
-              IT škola <br />
-              <i className="font-bold text-cyan-500 hidden sm:block">programiranja</i>
-              <br className="hidden sm:none" />
-              za djecu
+              <span className="hidden sm:block">
+                IT-škola <br />
+                <i className="font-bold text-cyan-500 hidden sm:block">
+                  programiranja
+                </i>
+                <br className="hidden sm:none" />
+                za djecu
+              </span>
+              {/* Mobile */}
+              <span className="sm:hidden font-bold">
+                <span className="text-cyan-500">IT-škola</span> <br />
+                <br className="hidden sm:none" />
+                za djecu<br/>
+                8-14 god.
+              </span>
             </h1>
           </div>
 
