@@ -9,18 +9,17 @@ import MenuControlButton from "components/atoms/MenuControlButton";
 
 const Header = () => {
   let [sidebarOpen, setSidebarOpen] = React.useState(false);
-  let openSidebar = () => {
-    window.scrollTo(0, 0);
-    setSidebarOpen(true);
-  };
-  let closeSidebar = () => {
-    document.body.classList.remove("overflow-hidden");
-    setSidebarOpen(false);
-  };
-  let toggleSidebar = () => {
-    document.body.classList.add("overflow-hidden");
-    sidebarOpen ? closeSidebar() : openSidebar();
-  };
+  React.useEffect(() => {
+    if (sidebarOpen) {
+      window.scrollTo(0, 0);
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [sidebarOpen]);
+
+  let toggleSidebar = () =>
+    sidebarOpen ? setSidebarOpen(false) : setSidebarOpen(true);
 
   return (
     <header className="py-2 md:py-4">
@@ -75,18 +74,18 @@ const Header = () => {
         )}
       >
         <div className="p-4 flex flex-col items-stretch space-y-4">
-          <a href="#partners" onClick={() => closeSidebar()}>
+          <a href="#partners" onClick={() => setSidebarOpen(false)}>
             {/* <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center"> */}
             <button className="w-full text-left text-xl">
               Naši IT partneri
             </button>
             {/* </button> */}
           </a>
-          <a href="#contact" onClick={() => closeSidebar()}>
+          <a href="#contact" onClick={() => setSidebarOpen(false)}>
             {/* <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center"> */}
             <button className="w-full text-left text-xl">Kontakt</button>
           </a>
-          <a href="#contact" onClick={() => closeSidebar()}>
+          <a href="#contact" onClick={() => setSidebarOpen(false)}>
             {/* <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center"> */}
             <button className="w-full text-left text-xl">
               Edukacijski program i cijene
@@ -105,7 +104,7 @@ const Header = () => {
             <a
               href="#contact"
               className="flex justify-center w-full"
-              onClick={() => closeSidebar()}
+              onClick={() => setSidebarOpen(false)}
             >
               <button className="w-full text-white bg-gradient-to-r from-indigo-700 to-purple-500 focus:ring-4 focus:ring-blue-300 font-normal rounded text-base px-9 py-3 text-center">
                 Zatražite povratni poziv
