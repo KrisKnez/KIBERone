@@ -33,7 +33,7 @@ const Hero = ({ className }) => {
       </div>
       <div className="flex items-stretch relative text-center lg:text-left">
         <div className="w-full lg:w-2/5 space-y-10">
-          <div className="relative border lg:border-0 p-4 lg:p-0 rounded-3xl overflow-hidden lg:overflow-visible flex">
+          <div className="relative border lg:border-0 px-4 py-6 lg:p-0 rounded-3xl overflow-hidden lg:overflow-visible flex">
             {/* Background image */}
             <div className="absolute h-full w-full inset-0 lg:hidden">
               <div className="relative h-full w-full inset-0">
