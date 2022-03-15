@@ -20,7 +20,7 @@ const Modal = (props) => {
         modalOpen ? "opacity-1 visible" : "opacity-0 invisible"
       )}
     >
-      <div className="w-full h-full sm:max-w-[400px] sm:max-h-[800px] bg-white overflow-y-scroll sm:overflow-auto flex flex-col rounded-md">
+      <div className="w-full h-full sm:max-w-[400px] sm:max-h-[800px] bg-white overflow-y-scroll sm:overflow-auto flex flex-col sm:rounded-md">
         <div className="flex justify-end">
           <button
             className="p-3 text-gray-500 text-2xl"
@@ -29,7 +29,7 @@ const Modal = (props) => {
             <IoMdClose />
           </button>
         </div>
-        <div className="p-4">
+        <div className="p-4 grow">
           {React.Children.map(props.children, (child) => child)}
         </div>
       </div>
