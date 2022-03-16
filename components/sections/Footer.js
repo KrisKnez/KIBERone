@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="basis-2/5 flex flex-col space-y-2 text-center">
           <span>
             © 2016-2021 KIBERone | 2018. godina- proglašena najboljom obrazovnom
-            ustanovom za digitalni odgoj djece od 6 do 15 godina, na teritoriju
+            ustanovom za digitalni odgoj djece od 6 do 14 godina, na teritoriju
             Europske Unije.
           </span>
           <span>
