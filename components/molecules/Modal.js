@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classNames from "classnames";
 
 import { IoMdClose } from "react-icons/io";
@@ -16,11 +16,11 @@ const Modal = (props) => {
   return (
     <div
       className={classNames(
-        "fixed w-screen h-screen inset-0 transition-all flex items-center justify-center bg-black/80",
+        "fixed w-full min-h-screen inset-0 transition-all flex flex-col items-center sm:py-16 bg-black/80 overflow-y-scroll",
         modalOpen ? "opacity-1 visible" : "opacity-0 invisible"
       )}
     >
-      <div className="w-full h-full sm:max-w-[400px] sm:max-h-[800px] bg-white overflow-y-scroll sm:overflow-auto flex flex-col sm:rounded-md">
+      <div className="w-full h-full sm:h-auto sm:max-w-[400px] bg-white flex flex-col sm:rounded-md">
         <div className="flex justify-end">
           <button
             className="p-3 text-gray-500 text-2xl"
@@ -29,7 +29,7 @@ const Modal = (props) => {
             <IoMdClose />
           </button>
         </div>
-        <div className="p-4 grow">
+        <div className="px-6 pb-6 grow">
           {React.Children.map(props.children, (child) => child)}
         </div>
       </div>
