@@ -27,4 +27,20 @@
   .input {
     @apply appearance-none px-4 py-2 rounded-md border border-gray-300 focus:border-gray-400 focus:outline-none transition duration-300;
   }
+
+  .input-error {
+    @apply text-red-500 border-red-500
+  }
+
+  .required {
+    @apply after:content-['*'] after:ml-0.5 after:text-red-500;
+  }
+
+  /* .radio {
+    @apply w-0 h-0 m-2 before:content-[''];
+  }
+
+  .radio::before {
+    @apply block w-4 h-4 inset-0 bg-red-500
+  } */
 }
