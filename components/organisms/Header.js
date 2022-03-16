@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import ContactModalContext from "./ContactModal.context";
 
 import Image from "next/image";
 
@@ -8,6 +9,8 @@ import Logo from "/assets/Logo.png";
 import MenuControlButton from "components/atoms/MenuControlButton";
 
 const Header = () => {
+  let [contactModalOpen, setContactModalOpen] =
+    React.useContext(ContactModalContext);
   let [sidebarOpen, setSidebarOpen] = React.useState(false);
   React.useEffect(() => {
     if (sidebarOpen) {
@@ -20,6 +23,11 @@ const Header = () => {
 
   let toggleSidebar = () =>
     sidebarOpen ? setSidebarOpen(false) : setSidebarOpen(true);
+
+  let handleOpenContactModal = () => {
+    setContactModalOpen(true);
+    setSidebarOpen(false);
+  };
 
   return (
     <header className="py-2 md:py-4">
@@ -40,7 +48,7 @@ const Header = () => {
             <span>za djecu od 6 do 14 godina</span>
           </div>
           {/* Button povratni poziv */}
-          <a href="#contact" className="flex justify-center">
+          <a className="flex justify-center" onClick={handleOpenContactModal}>
             <button className="button-outlined">
               <span>Zatražite povratni poziv</span>
             </button>
@@ -74,18 +82,18 @@ const Header = () => {
         )}
       >
         <div className="p-4 flex flex-col items-stretch space-y-4">
-          <a href="#partners" onClick={() => setSidebarOpen(false)}>
+          <a onClick={handleOpenContactModal}>
             {/* <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center"> */}
             <button className="w-full text-left text-xl">
               Naši IT partneri
             </button>
             {/* </button> */}
           </a>
-          <a href="#contact" onClick={() => setSidebarOpen(false)}>
+          <a onClick={handleOpenContactModal}>
             {/* <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center"> */}
             <button className="w-full text-left text-xl">Kontakt</button>
           </a>
-          <a href="#contact" onClick={() => setSidebarOpen(false)}>
+          <a onClick={handleOpenContactModal}>
             {/* <button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center"> */}
             <button className="w-full text-left text-xl">
               Edukacijski program i cijene
@@ -102,9 +110,8 @@ const Header = () => {
               <span>Okićka 17, 21000 Zagreb</span>
             </div>
             <a
-              href="#contact"
               className="flex justify-center w-full"
-              onClick={() => setSidebarOpen(false)}
+              onClick={handleOpenContactModal}
             >
               <button className="w-full text-white bg-gradient-to-r from-indigo-700 to-purple-500 focus:ring-4 focus:ring-blue-300 font-normal rounded text-base px-9 py-3 text-center">
                 Zatražite povratni poziv

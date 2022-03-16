@@ -1,6 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 
+import ContactModalContext from "components/organisms/ContactModal.context";
+
 import Image from "next/image";
 
 import Section from "/components/templates/Section";
@@ -12,6 +14,10 @@ import Kids from "/assets/kids_faded2_cut.png";
 import KidsSquare from "/assets/kids_square.png";
 
 const Hero = ({ className }) => {
+  let [contactModalOpen, setContactModalOpen] =
+    React.useContext(ContactModalContext);
+  let handleOpenContactModal = () => setContactModalOpen(true);
+
   return (
     <Section
       className={classNames(
@@ -62,7 +68,8 @@ const Hero = ({ className }) => {
               <span className="sm:hidden font-bold">
                 <span className="text-cyan-500">IT-škola</span> <br />
                 <br className="hidden sm:none" />
-                za djecu<br/>
+                za djecu
+                <br />
                 8-14 god.
               </span>
             </h1>
@@ -90,7 +97,7 @@ const Hero = ({ className }) => {
             </Accordion>
           </div>
           <div className="flex flex-col sm:flex-row items-center sm:space-x-2 space-y-4 sm:space-y-0">
-            <a href="#contact" className="w-full sm:w-auto">
+            <a className="w-full sm:w-auto" onClick={handleOpenContactModal}>
               <button className="button">Edukacijski program i cijene</button>
             </a>
             <div className="flex flex-col text text-left text-sm">

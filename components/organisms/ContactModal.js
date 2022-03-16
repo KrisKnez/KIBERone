@@ -2,16 +2,19 @@ import React from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 
+import ContactModalContext from "./ContactModal.context";
+
 import Modal from "components/molecules/Modal";
 
 import KidProfile from "assets/kid_profile.jpg";
 import classNames from "classnames";
 
 const ContactModal = () => {
+  const [contactModalOpen, setContactModalOpen] = React.useContext(ContactModalContext);
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -20,7 +23,7 @@ const ContactModal = () => {
   };
 
   return (
-    <Modal>
+    <Modal active={contactModalOpen} setActive={setContactModalOpen}>
       <div className="flex items-center justify-center space-x-4 ">
         <div className="relative w-24 h-24 bg-gray-300 rounded-full overflow-hidden">
           <Image layout="fill" src={KidProfile} alt="dijete profil" />

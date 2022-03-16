@@ -1,12 +1,16 @@
 import React from "react";
+import ContactModalContext from "components/organisms/ContactModal.context";
 
 import Section from "/components/templates/Section";
 
 const Card = (props) => {
+  let [contactModalOpen, setContactModalOpen] = React.useContext(ContactModalContext);
+  let handleOpenContactModal = () => setContactModalOpen(true);
+
   return (
     <a
-      href="#contact"
-      className="group relative basis-full overflow-hidden rounded-3xl bg-gradient-to-br from-slate-700 to-slate-800"
+      className="group relative basis-full overflow-hidden rounded-3xl bg-gradient-to-br from-slate-700 to-slate-800 cursor-pointer"
+      onClick={handleOpenContactModal}
     >
       <div className="absolute bg-blue-600 w-0 group-hover:w-full h-0 md:group-hover:h-full bottom-0 left-0 rounded-full transition-all duration-300 ease-in transform-gpu -translate-x-full translate-y-full scale-[4] hidden md:block"></div>
       <div className="relative transition-all text-white  flex flex-col justify-between space-y-4 p-8">
