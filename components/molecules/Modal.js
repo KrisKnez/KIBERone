@@ -19,7 +19,7 @@ const Modal = ({active, setActive, ...props}) => {
         active ? "opacity-1 visible" : "opacity-0 invisible"
       )}
     >
-      <div className="w-full min-h-full sm:h-auto sm:max-w-[400px] bg-white flex flex-col sm:rounded-md">
+      <div className="w-full sm:h-auto sm:max-w-[400px] bg-white flex flex-col sm:rounded-md">
         <div className="flex justify-end">
           <button
             className="p-3 text-gray-500 text-2xl"
