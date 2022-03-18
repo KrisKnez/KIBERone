@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 import ContactModalContext from "./ContactModal.context";
 
@@ -9,17 +10,63 @@ import Modal from "components/molecules/Modal";
 import KidProfile from "assets/kid_profile.jpg";
 import classNames from "classnames";
 
+const PORTAL_ID = "25657475";
+const FORM_GUID = "1c907513-b3ef-43b9-9e43-6552be414830";
+const ENDPOINT = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
+
 const ContactModal = () => {
-  const [contactModalOpen, setContactModalOpen] = React.useContext(ContactModalContext);
+  const [contactModalOpen, setContactModalOpen] =
+    React.useContext(ContactModalContext);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      let response = await axios.post(ENDPOINT, {
+        fields: [
+          {
+            objectTypeId: "0-1",
+            name: "firstname",
+            value: data.firstname,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "lastname",
+            value: ".",
+          },
+          {
+            objectTypeId: "0-1",
+            name: "phone",
+            value: data.phone,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "email",
+            value: data.email,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "dob_djeteta",
+            value: data.dob,
+          },
+          {
+            objectTypeId: "0-1",
+            name: "kontakt_broj",
+            value: data.kontakt,
+          },
+        ],
+      });
+      alert("Hvala, poruka je zaprimljena. Javit cemo vam se sto prije");
+      setContactModalOpen(false);
+      reset();
+    } catch (e) {
+      alert("Provjerite unesene podatke");
+    }
   };
 
   return (
@@ -53,7 +100,7 @@ const ContactModal = () => {
             })}
             type="text"
             placeholder="Vaše ime"
-            {...register("fullname", { required: true })}
+            {...register("firstname", { required: true })}
           />
           {errors.fullname && (
             <span className="text-red-500">Molimo vas upišite ime</span>
@@ -97,7 +144,7 @@ const ContactModal = () => {
             className={classNames("input", { "input-error": errors.age })}
             type="number"
             placeholder="Dob vašeg djeteta"
-            {...register("age", { required: true })}
+            {...register("dob", { required: true })}
           />
           {errors.age && (
             <span className="text-red-500">Molimo vas upišite dob djeteta</span>
