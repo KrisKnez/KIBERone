@@ -15,7 +15,7 @@ const Modal = ({ active, setActive, ...props }) => {
   return (
     <div
       className={classNames(
-        "fixed w-full min-h-screen inset-0 transition-all flex flex-col items-center sm:py-16 bg-black/80 overflow-y-scroll",
+        "fixed w-full min-h-full inset-0 transition-all flex flex-col items-center sm:py-16 bg-black/80 overflow-y-scroll",
         active ? "opacity-1 visible" : "opacity-0 invisible"
       )}
     >
