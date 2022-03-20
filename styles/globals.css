@@ -47,4 +47,8 @@
   .no-scroll {
     @apply overflow-hidden relative h-full;
   }
+
+  .no-scroll body {
+    @apply overflow-hidden relative h-full;
+  }
 }

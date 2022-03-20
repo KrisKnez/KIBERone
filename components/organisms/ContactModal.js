@@ -96,13 +96,13 @@ const ContactModal = () => {
           <span className="text-sm required">Ime</span>
           <input
             className={classNames("input", {
-              "input-error": errors.fullname,
+              "input-error": errors.firstname,
             })}
             type="text"
             placeholder="Vaše ime"
             {...register("firstname", { required: true })}
           />
-          {errors.fullname && (
+          {errors.firstname && (
             <span className="text-red-500">Molimo vas upišite ime</span>
           )}
         </label>
@@ -141,12 +141,12 @@ const ContactModal = () => {
         <label className="flex flex-col space-y-2">
           <span className="text-sm required">Dob djeteta</span>
           <input
-            className={classNames("input", { "input-error": errors.age })}
+            className={classNames("input", { "input-error": errors.dob })}
             type="number"
             placeholder="Dob vašeg djeteta"
             {...register("dob", { required: true })}
           />
-          {errors.age && (
+          {errors.dob && (
             <span className="text-red-500">Molimo vas upišite dob djeteta</span>
           )}
         </label>
