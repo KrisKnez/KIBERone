@@ -6,11 +6,11 @@
   html {
     -webkit-tap-highlight-color: transparent;
     font-family: "Open Sans", "Helvetica", "Verdana", "Roboto", sans-serif;
-    height: -webkit-fill-available;
+    height: -webkit-fill-available!important;
   }
   body {
     min-height: 100vh;
-    min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available!important;
   }
 }
 
