@@ -70,7 +70,7 @@ const Hero = ({ className }) => {
                 <br className="hidden sm:none" />
                 za djecu
                 <br />
-                8-14 god.
+                6-14 god.
               </span>
             </h1>
           </div>

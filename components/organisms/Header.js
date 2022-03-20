@@ -15,9 +15,11 @@ const Header = () => {
   React.useEffect(() => {
     if (sidebarOpen) {
       window.scrollTo(0, 0);
-      document.body.classList.add("overflow-hidden");
+      document.documentElement.classList.add("no-scroll");
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("no-scroll");
+      document.body.classList.remove("no-scroll");
     }
   }, [sidebarOpen]);
 
@@ -74,7 +76,7 @@ const Header = () => {
       {/* Mobile sidebar */}
       <aside
         className={classNames(
-          "md:hidden bg-white w-full h-full fixed top-[66px] pb-[86px] z-50 transition-all ease-[cubic-bezier(1.000,0.000,0.000,1.000)] duration-500 shadow-lg flex flex-col p-4",
+          "md:hidden bg-white w-full h-full fixed top-[66px] pb-[86px] z-50 transition-all ease-[cubic-bezier(1.000,0.000,0.000,1.000)] duration-500 shadow-lg flex flex-col p-4 overflow-auto",
           sidebarOpen
             ? "translate-y-0 opacity-1 visible"
             : "translate-y-1/4 opacity-0 invisible",

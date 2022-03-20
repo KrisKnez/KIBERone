@@ -3,12 +3,14 @@ import classNames from "classnames";
 
 import { IoMdClose } from "react-icons/io";
 
-const Modal = ({active, setActive, ...props}) => {
+const Modal = ({ active, setActive, ...props }) => {
   React.useEffect(() => {
     if (active) {
-      document.body.classList.add("overflow-hidden");
+      document.documentElement.classList.add("no-scroll");
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("no-scroll");
+      document.body.classList.remove("no-scroll");
     }
   }, [active]);
 
