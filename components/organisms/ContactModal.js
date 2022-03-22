@@ -41,23 +41,18 @@ const ContactModal = () => {
           },
           {
             objectTypeId: "0-1",
-            name: "phone",
-            value: data.phone,
-          },
-          {
-            objectTypeId: "0-1",
             name: "email",
             value: data.email,
           },
           {
             objectTypeId: "0-1",
-            name: "dob_djeteta",
-            value: data.dob,
+            name: "phone",
+            value: data.phone,
           },
           {
             objectTypeId: "0-1",
-            name: "kontakt_broj",
-            value: data.kontakt,
+            name: "dob_djeteta",
+            value: data.dob,
           },
         ],
       });
@@ -65,7 +60,8 @@ const ContactModal = () => {
       setContactModalOpen(false);
       reset();
     } catch (e) {
-      alert("Provjerite unesene podatke");
+      console.log(e.response.data.errors)
+      alert(`Provjerite unesene podatke\n\nSadržaj Greške:\n${JSON.stringify(e.response.data.errors)}`);
     }
   };
 
