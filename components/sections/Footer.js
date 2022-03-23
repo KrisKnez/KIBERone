@@ -17,7 +17,7 @@ const Footer = () => {
             Europske Unije.
           </span>
           <span>
-            Nagrađeni od strane UN-a i UNESC-a prvim mjestom u kategoriji
+            Nagrađeni od strane UN-a i UNESCO-a prvim mjestom u kategoriji
             najbolji međunarodni projekt edukacije za djecu u području digitalne
             tehnologije.
           </span>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import classNames from "classnames";
 
 import axios from "axios";
 
@@ -10,7 +11,7 @@ const FORM_GUID = "b14de669-5dfe-4ec3-b9be-3cc962fcfcdf";
 const ENDPOINT = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
 
 const Contact = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
     try {
@@ -48,7 +49,7 @@ const Contact = () => {
       reset();
     } catch (e) {
       console.error(e);
-      alert("Provjerite unesene podatke")
+      alert("Provjerite unesene podatke");
     }
   };
 
@@ -81,7 +82,8 @@ const Contact = () => {
                 className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
                 <span className="space-x-1">
-                  <span>Ime:</span><span className="text-red-500">*</span>
+                  <span>Ime:</span>
+                  <span className="text-red-500">*</span>
                 </span>
                 <input
                   id="firstname"
@@ -98,7 +100,8 @@ const Contact = () => {
                 className="flex flex-col text-gray-700 select-none font-medium w-full md:w-1/2 space-y-1"
               >
                 <span className="space-x-1">
-                  <span>Prezime:</span><span className="text-red-500">*</span>
+                  <span>Prezime:</span>
+                  <span className="text-red-500">*</span>
                 </span>
 
                 <input
@@ -117,7 +120,8 @@ const Contact = () => {
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
               <span className="space-x-1">
-                <span>Broj telefona:</span><span className="text-red-500">*</span>
+                <span>Broj telefona:</span>
+                <span className="text-red-500">*</span>
               </span>
               <input
                 id="tel"
@@ -134,7 +138,8 @@ const Contact = () => {
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
               <span className="space-x-1">
-                <span>Email:</span><span className="text-red-500">*</span>
+                <span>Email:</span>
+                <span className="text-red-500">*</span>
               </span>
               <input
                 id="email"
@@ -151,7 +156,8 @@ const Contact = () => {
               className="flex flex-col text-gray-700 select-none font-medium w-full space-y-1"
             >
               <span className="space-x-1">
-                <span>Pitanje:</span><span className="text-red-500">*</span>
+                <span>Pitanje:</span>
+                <span className="text-red-500">*</span>
               </span>
               <textarea
                 id="message"
@@ -160,6 +166,27 @@ const Contact = () => {
                 className="input"
               />
             </label>
+
+            {/* GDPR */}
+            <div className="flex flex-col">
+              <label className="flex">
+                <input
+                  className={classNames("m-1", { "input-error": errors.gdpr })}
+                  type="checkbox"
+                  {...register("gdpr", { required: true })}
+                />
+                <span className="text-sm">
+                  Prihvaćam izjava o davanju suglasnosti za obradu osobnih
+                  podataka
+                </span>
+              </label>
+              {errors.gdpr && (
+                <span className="text-red-500">
+                  Molimo vas prihvatite GDPR pravila.
+                </span>
+              )}
+            </div>
+
             <div className="w-full">
               <button type="submit" className="button w-full md:w-auto">
                 Dogovori poziv

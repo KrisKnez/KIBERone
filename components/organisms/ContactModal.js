@@ -8,6 +8,7 @@ import ContactModalContext from "./ContactModal.context";
 import Modal from "components/molecules/Modal";
 
 import KidProfile from "assets/kid_profile.jpg";
+import KiberoneNoviLogo from "assets/kiberon-zg-novi-logo.png";
 import classNames from "classnames";
 
 const PORTAL_ID = "25657475";
@@ -22,7 +23,7 @@ const ContactModal = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -60,8 +61,12 @@ const ContactModal = () => {
       setContactModalOpen(false);
       reset();
     } catch (e) {
-      console.log(e.response.data.errors)
-      alert(`Provjerite unesene podatke\n\nSadržaj Greške:\n${JSON.stringify(e.response.data.errors)}`);
+      console.log(e.response.data.errors);
+      alert(
+        `Provjerite unesene podatke\n\nSadržaj Greške:\n${JSON.stringify(
+          e.response.data.errors
+        )}`
+      );
     }
   };
 
@@ -69,12 +74,12 @@ const ContactModal = () => {
     <Modal active={contactModalOpen} setActive={setContactModalOpen}>
       <div className="flex items-center justify-center space-x-4 ">
         <div className="relative w-24 h-24 bg-gray-300 rounded-full overflow-hidden">
-          <Image layout="fill" src={KidProfile} alt="dijete profil" />
+          <Image layout="fill" src={KiberoneNoviLogo} alt="kiberone-zg" />
         </div>
         <div className="">
-          <span className="font-bold">Lev Antonovich</span>
+          <span className="font-bold">KIBERone Zagreb</span>
           <br />
-          <span>Kiberbot, 24/7</span>
+          <span>Okićka 17, 21000 Zagreb</span>
         </div>
       </div>
       <div className="p-8 font-bold text-xl text-center">
@@ -174,6 +179,21 @@ const ContactModal = () => {
             <span className="text-red-500">
               Molimo vas odaberite način kontakta
             </span>
+          )}
+        </div>
+
+        {/* GDPR */}
+        <div className="flex flex-col">
+          <label className="flex">
+            <input
+              className={classNames("m-1", { "input-error": errors.gdpr })}
+              type="checkbox"
+              {...register("gdpr", { required: true })}
+            />
+            <span className="text-sm">Prihvaćam izjava o davanju suglasnosti za obradu osobnih podataka</span>
+          </label>
+          {errors.gdpr && (
+            <span className="text-red-500">Molimo vas prihvatite GDPR pravila.</span>
           )}
         </div>
 
