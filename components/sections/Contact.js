@@ -45,7 +45,7 @@ const Contact = () => {
         ],
       });
 
-      alert("Hvala, poruka je zaprimljena. Javit cemo vam se sto prije");
+      alert("Hvala, poruka je zaprimljena. Javit ćemo Vam se što prije!");
       reset();
     } catch (e) {
       console.error(e);
@@ -176,7 +176,7 @@ const Contact = () => {
                   {...register("gdpr", { required: true })}
                 />
                 <span className="text-sm">
-                  Prihvaćam izjava o davanju suglasnosti za obradu osobnih
+                  Prihvaćam izjavu o davanju suglasnosti za obradu osobnih
                   podataka
                 </span>
               </label>

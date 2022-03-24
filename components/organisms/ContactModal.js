@@ -57,7 +57,7 @@ const ContactModal = () => {
           },
         ],
       });
-      alert("Hvala, poruka je zaprimljena. Javit cemo vam se sto prije");
+      alert("Hvala, poruka je zaprimljena. Javit ćemo Vam se što prije!");
       setContactModalOpen(false);
       reset();
     } catch (e) {
@@ -79,7 +79,7 @@ const ContactModal = () => {
         <div className="">
           <span className="font-bold">KIBERone Zagreb</span>
           <br />
-          <span>Okićka 17, 21000 Zagreb</span>
+          <span>Okićka 17, 10000 Zagreb</span>
         </div>
       </div>
       <div className="p-8 font-bold text-xl text-center">
@@ -190,7 +190,7 @@ const ContactModal = () => {
               type="checkbox"
               {...register("gdpr", { required: true })}
             />
-            <span className="text-sm">Prihvaćam izjava o davanju suglasnosti za obradu osobnih podataka</span>
+            <span className="text-sm">Prihvaćam izjavu o davanju suglasnosti za obradu osobnih podataka</span>
           </label>
           {errors.gdpr && (
             <span className="text-red-500">Molimo vas prihvatite GDPR pravila.</span>

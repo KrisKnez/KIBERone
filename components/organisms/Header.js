@@ -58,7 +58,7 @@ const Header = () => {
             <a href="tel:385953943344" className="font-bold">
               +385 95 394 33 44
             </a>
-            <span>Okićka 17, 21000 Zagreb</span>
+            <span>Okićka 17, 10000 Zagreb</span>
           </div>
         </div>
         {/* Mobile button */}
@@ -107,7 +107,7 @@ const Header = () => {
               <a href="tel:385953943344" className="font-bold">
                 +385 95 394 33 44
               </a>
-              <span>Okićka 17, 21000 Zagreb</span>
+              <span>Okićka 17, 10000 Zagreb</span>
             </div>
             <a
               className="flex justify-center w-full"

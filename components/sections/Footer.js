@@ -12,9 +12,11 @@ const Footer = () => {
       <div className="container mx-auto max-w-screen-xl px-4 py-8 flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-16">
         <div className="basis-2/5 flex flex-col space-y-2 text-center">
           <span>
-            © 2016-2021 KIBERone | 2018. godina- proglašena najboljom obrazovnom
-            ustanovom za digitalni odgoj djece od 6 do 14 godina, na teritoriju
-            Europske Unije.
+            2016-2021 KIBERone projekt proglašen je najboljom obrazovnom
+            ustanovom za digitalni odgoj djece od 6 do 14 godine u EU (2018.) .
+            Projekt KIBERone dobio je priznanje od strane UN-a i UNESCO-a i prvo
+            mjesto kao najbolji međunarodni projekt edukacije za djecu u
+            području digitalnih vještina (2020.)
           </span>
           <span>
             Nagrađeni od strane UN-a i UNESCO-a prvim mjestom u kategoriji
@@ -30,7 +32,7 @@ const Footer = () => {
                 src={Histes}
                 alt="Histes"
                 objectFit="contain"
-              />  
+              />
             </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/3 bg-black px-8 md:px-4 py-8 flex justify-center items-center">
