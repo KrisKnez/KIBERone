@@ -186,8 +186,10 @@ const Contact = () => {
                 <span className="text-sm">
                   Prihvaćam izjavu o davanju suglasnosti za obradu osobnih
                   podataka u skladu s{" "}
-                  <Link href="/politika-privatnosti">
-                    politikom privatnosti
+                  <Link href="/politika-privatnosti" passHref>
+                    <span className="underline cursor-pointer">
+                      politikom privatnosti
+                    </span>
                   </Link>{" "}
                   i ponudom.
                 </span>
