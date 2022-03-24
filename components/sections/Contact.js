@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
+import Link from "next/link";
 
 import axios from "axios";
 
@@ -11,7 +12,12 @@ const FORM_GUID = "b14de669-5dfe-4ec3-b9be-3cc962fcfcdf";
 const ENDPOINT = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_GUID}`;
 
 const Contact = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = async (data) => {
     try {
@@ -171,13 +177,19 @@ const Contact = () => {
             <div className="flex flex-col">
               <label className="flex">
                 <input
-                  className={classNames("m-1", { "input-error": errors.gdpr })}
+                  className={classNames("my-1 mr-2", {
+                    "input-error": errors.gdpr,
+                  })}
                   type="checkbox"
                   {...register("gdpr", { required: true })}
                 />
                 <span className="text-sm">
                   Prihvaćam izjavu o davanju suglasnosti za obradu osobnih
-                  podataka
+                  podataka u skladu s{" "}
+                  <Link href="/politika-privatnosti">
+                    politikom privatnosti
+                  </Link>{" "}
+                  i ponudom.
                 </span>
               </label>
               {errors.gdpr && (

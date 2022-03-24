@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import Link from "next/link";
 
 import ContactModalContext from "./ContactModal.context";
 
@@ -186,14 +187,23 @@ const ContactModal = () => {
         <div className="flex flex-col">
           <label className="flex">
             <input
-              className={classNames("m-1", { "input-error": errors.gdpr })}
+              className={classNames("my-1 mr-2", {
+                "input-error": errors.gdpr,
+              })}
               type="checkbox"
               {...register("gdpr", { required: true })}
             />
-            <span className="text-sm">Prihvaćam izjavu o davanju suglasnosti za obradu osobnih podataka</span>
+            <span className="text-sm">
+              Prihvaćam izjavu o davanju suglasnosti za obradu osobnih podataka
+              u skladu s{" "}
+              <Link href="/politika-privatnosti">politikom privatnosti</Link> i
+              ponudom.
+            </span>
           </label>
           {errors.gdpr && (
-            <span className="text-red-500">Molimo vas prihvatite GDPR pravila.</span>
+            <span className="text-red-500">
+              Molimo vas prihvatite GDPR pravila.
+            </span>
           )}
         </div>
 
