@@ -40,7 +40,7 @@ const Cards = () => {
           <span className="font-bold">Saznaj više</span>
         </Card>
       </Link>
-      <Link href={KampPDF1Path} passHref>
+      <Link href={KampPDF2Path} passHref>
         <Card onClick={undefined}>
           {/* <span className="text-gray-300">#2</span> */}
 
