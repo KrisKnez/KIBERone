@@ -5,8 +5,9 @@ import ContactModalContext from "components/organisms/ContactModal.context";
 
 import Section from "/components/templates/Section";
 
-let KampPDF1Path = "/doc/WEB_Ljetni_KAMP2022_1.pdf";
-let KampPDF2Path = "/doc/WEB_Ljetni_KAMP2022_2.pdf";
+const Redovni_program = "/doc/Redovni_program.pdf";
+const Radionice_KIBERone2 = "/doc/Radionice_KIBERone2.pdf";
+const Edukacijiski_program_moduli1 = "/doc/Edukacijiski_program_moduli1.pdf";
 
 const Card = (props) => {
   let [contactModalOpen, setContactModalOpen] =
@@ -29,38 +30,44 @@ const Card = (props) => {
 const Cards = () => {
   return (
     <Section className="flex flex-wrap md:flex-nowrap justify-between md:space-x-8 space-y-8 md:space-y-0 px-4">
-      <Link href={KampPDF1Path} passHref>
+      <Link href={Edukacijiski_program_moduli1} passHref>
         <Card onClick={undefined}>
           {/* <span className="text-gray-300">#1</span> */}
 
-          <h3 className="text-2xl font-semibold">LJETNA IT ŠKOLA</h3>
+          <h3 className="text-2xl font-semibold">Nastava u KIBERONE UŽIVO</h3>
           <span className="text-2xl text-gray-200 font-semibold">
-            Za mlade digitalce od 7 do 13 godina
+          U programu KiberŠkole postoji više od 50 modula.
           </span>
-          <span className="font-bold">Saznaj više</span>
+          <span className="font-bold">Pregled modula</span>
         </Card>
       </Link>
-      <Link href={KampPDF2Path} passHref>
+      <Link href={Radionice_KIBERone2} passHref>
         <Card onClick={undefined}>
           {/* <span className="text-gray-300">#2</span> */}
 
           <span className="text-2xl text-gray-200 font-semibold">
-            Kako dijeci strukturirati ljetne praznici, kako izbjeći da budu
-            stalno na mobitelu?
+          Dijete bulji u ekran? Dovedite ga u KIBERone!
           </span>
           <h3 className="text-2xl font-semibold">
-            Radionice vikendom LJETO 2022.
+          Radionice programiranje za djecu
+
+od 7 do 13 godina
+          </h3>
+          <span className="font-bold">Pregled programa</span>
+        </Card>
+      </Link>
+      <Link href={Redovni_program} passHref>
+        <Card onClick={undefined}>
+          {/* <span className="text-gray-300">#3</span> */}
+          <span className="text-2xl text-gray-200 font-semibold">
+          Gubljenje vremena na gadgetima pretvaramo u korisno znanje!
+          </span>
+          <h3 className="text-3xl font-semibold">
+          UPISI U TIJEKU!
           </h3>
           <span className="font-bold">Saznaj više</span>
         </Card>
       </Link>
-      <Card>
-        {/* <span className="text-gray-300">#3</span> */}
-        <h3 className="text-3xl font-semibold">
-          Kako izgleda pohađanje edukacije u KIBERone-u?
-        </h3>
-        <span className="font-bold">Saznaj više</span>
-      </Card>
     </Section>
   );
 };
