@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import download from "downloadjs";
 
 import ContactModalContext from "components/organisms/ContactModal.context";
 
@@ -30,19 +31,17 @@ const Card = (props) => {
 const Cards = () => {
   return (
     <Section className="flex flex-wrap md:flex-nowrap justify-between md:space-x-8 space-y-8 md:space-y-0 px-4">
-      <Link href={Edukacijiski_program_moduli1} passHref>
-        <Card onClick={undefined}>
-          {/* <span className="text-gray-300">#1</span> */}
+      <Card onClick={() => download(Edukacijiski_program_moduli1)}>
+        {/* <span className="text-gray-300">#1</span> */}
 
-          <h3 className="text-2xl font-semibold">Nastava u KIBERONE UŽIVO</h3>
-          <span className="text-2xl text-gray-200 font-semibold">
-          U programu KiberŠkole postoji više od 50 modula.
-          </span>
-          <span className="font-bold">Pregled modula</span>
-        </Card>
-      </Link>
-      <Link href={Radionice_KIBERone2} passHref>
-        <Card onClick={undefined}>
+        <h3 className="text-2xl font-semibold">Nastava u KIBERONE UŽIVO</h3>
+        <span className="text-2xl text-gray-200 font-semibold">
+        U programu KiberŠkole postoji više od 50 modula.
+        </span>
+        <span className="font-bold">Pregled modula</span>
+      </Card>
+      {/* <Link href={Radionice_KIBERone2} passHref> */}
+        <Card onClick={() => download(Radionice_KIBERone2)}>
           {/* <span className="text-gray-300">#2</span> */}
 
           <span className="text-2xl text-gray-200 font-semibold">
@@ -55,9 +54,9 @@ od 7 do 13 godina
           </h3>
           <span className="font-bold">Pregled programa</span>
         </Card>
-      </Link>
-      <Link href={Redovni_program} passHref>
-        <Card onClick={undefined}>
+      {/* </Link> */}
+      {/* <Link href={Redovni_program} passHref> */}
+        <Card onClick={() => download(Redovni_program)}>
           {/* <span className="text-gray-300">#3</span> */}
           <span className="text-2xl text-gray-200 font-semibold">
           Gubljenje vremena na gadgetima pretvaramo u korisno znanje!
@@ -67,7 +66,7 @@ od 7 do 13 godina
           </h3>
           <span className="font-bold">Saznaj više</span>
         </Card>
-      </Link>
+      {/* </Link> */}
     </Section>
   );
 };
