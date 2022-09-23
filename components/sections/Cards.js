@@ -31,7 +31,7 @@ const Card = (props) => {
 const Cards = () => {
   return (
     <Section className="flex flex-wrap md:flex-nowrap justify-between md:space-x-8 space-y-8 md:space-y-0 px-4">
-      <Link href={Radionice_KIBERone2} passHref>
+      <Link href={Edukacijiski_program_moduli1} passHref>
         <Card>
           {/* <span className="text-gray-300">#1</span> */}
 
